@@ -91,7 +91,7 @@
 }
 
 .intro {
-    max-height: 430px;
+    max-width: 985px;
     margin: 92px auto 0;
 }
 
@@ -106,27 +106,85 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 163%;
-    margin: ;
+    margin: 40px 0 0;
 }
 
 .intro__list {
-    font-weight: 400;
+    font-weight: normal;
     font-size: 12px;
     line-height: 18px;
     list-style: none;
+    padding: 0;
+    margin: 33px 0 0;
 }
 
 .intro__span-accent {
     font-weight: 700;
+}
+
+.photo-grid {
+    margin: 92px auto;
+    max-width: 1184px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+    gap: 16px;
+}
+
+.photo-grid__image {
+    max-width: 100%;
+}
+
+.places {
+    max-width: 985px;
+    margin: 0 auto;
+    display: grid;
+}
+
+.place {
+    
+}
+
+.place__title {
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 76px;
+    margin: 0;
+}
+
+.place__image {
+    width: 460px;
+    height: 460px;
+}
+
+.place__website {
+    
+}
+
+.place__url-heading {
+    color: #aaa;
+    font-weight: 400;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    margin: 0;
 }
 
-.footer {
+.place__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #fff;
 }
 
+.place__paragraph {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 163%;
+    margin: 0;
+}
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
     /* стили для больших настольных компьютеров и ноутбуков */
 }
 @media screen and (max-width: 1024px) {
