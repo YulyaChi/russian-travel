@@ -17,7 +17,7 @@
     justify-content: space-between;
     padding-top: 28px;
     max-width: 1184px;
-    align-items: center;
+    align-items: flex-end;
     margin: 0 auto 58px;
 }
 
@@ -29,7 +29,6 @@
 .header__lang-links {
     list-style: none;
     display: flex;
-    align-items: flex-end;
     margin: 0;
     padding: 0;
 }
@@ -37,7 +36,7 @@
 .header__lang-link {
     text-decoration: none;
     color: #fff;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     margin-left: 18px;
@@ -45,14 +44,15 @@
 
 .header__lang-link_active {
     text-decoration-line: underline;
+    text-underline-offset: 4px;
 }
 
-.content {
-
+.header__lang-link_active:first-of-type {
+    margin-left: 0;
 }
 
 .lead {
-    max-width: 985px;
+    max-width: 984px;
     margin: 0 auto;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .lead__subtitle {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
@@ -74,17 +74,16 @@
     margin: 32px auto 64px;
 }
 
-.lead__image-block {
+.lead__image-container {
     margin: 0;
 }
 
 .lead__image {
-    height: 615px;
     width: 100%;
 }
 
 .lead__caption {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 1.5px;
@@ -93,7 +92,7 @@
 }
 
 .intro {
-    max-width: 985px;
+    max-width: 984px;
     margin: 92px auto 0;
 }
 
@@ -105,14 +104,14 @@
 }
 
 .intro__text {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 163%;
     margin: 40px 0 0;
 }
 
 .intro__list {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     list-style: none;
@@ -144,12 +143,10 @@
 .place {
     display: grid;
     grid-template-columns: 460px 1fr;
-    grid-template-rows: minmax(min-content, max-content);
     grid-column-gap: 40px;
     grid-template-areas:
         "title website"
-        "pic paragraph_position_top"
-        "pic paragraph_position_bottom";
+        "pic paragraph";
     box-sizing: border-box;
     margin-bottom: 80px;
 }
@@ -199,20 +196,20 @@
     opacity: 0.8;
 }
 
+.place__container {
+    grid-area: paragraph;
+}
+
 .place__paragraph {
     font-weight: 400;
     font-size: 18px;
     line-height: 163%;
     margin: 0;
+    padding-bottom: 26px;
 }
 
-.place__paragraph_position_top {
-    grid-area: paragraph_position_top;
-    margin-bottom: 26px;
-}
-
-.place__paragraph_position_bottom {
-    grid-area: paragraph_position_bottom;
+.place__paragraph:nth-of-type(2) {
+    padding-bottom: 0;
 }
 
 .cover {
@@ -237,7 +234,7 @@
     opacity: 0.3;
   }
 
-  .cover:hover::after {
+.cover:hover::after {
     opacity: 0.8;
   }
 
