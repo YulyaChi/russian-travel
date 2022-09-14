@@ -2,10 +2,28 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 163%;
-    margin: 0;
-    padding-bottom: 26px;
+    margin: 0 0 26px;
+    grid-column: 2;
 }
 
 .place__paragraph:nth-of-type(2) {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
+
+@media screen and (max-width: 1023px) {
+    .place__paragraph {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .place__paragraph {
+        max-width: 90%;
+        grid-column: 1;
+        margin: 0 auto 25px;
+    }
+    
+    .place__paragraph:first-of-type {
+        margin-top: 32px;
+    }
+  }
